@@ -1,11 +1,15 @@
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import {
   DialogComponent,
+  EmployeesSearchFormComponent,
   SpinnerComponent,
   ToolbarComponent,
 } from './components';
@@ -25,7 +29,10 @@ import { GlobalErrorHandler } from './handdler';
     DialogComponent,
     SpinnerComponent,
     BrowserModule,
-    MatButtonModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    EmployeesSearchFormComponent,
   ],
   providers: [
     {

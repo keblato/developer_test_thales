@@ -1,5 +1,12 @@
 <app-spinner></app-spinner>
-<app-toolbar></app-toolbar>
-<div class="main-container">
-  <router-outlet></router-outlet>
-</div>
+<app-toolbar [onMenuOption]="drawer"></app-toolbar>
+<mat-drawer-container class="example-container">
+  <mat-drawer class="drawer" #drawer mode="side">
+    <app-employees-search-form></app-employees-search-form>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="main-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

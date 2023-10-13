@@ -1,12 +1,18 @@
 import { HttpErrorResponse, HttpStatusCode } from '@angular/common/http';
 import { ErrorHandler, Injectable, NgZone } from '@angular/core';
-import { DialogService } from '../services';
+import { DialogService, LoaderService } from '../services';
 
 @Injectable()
 export class GlobalErrorHandler implements ErrorHandler {
-  constructor(private dialogService: DialogService, private zone: NgZone) {}
+  constructor(
+    private dialogService: DialogService,
+    private zone: NgZone,
+    private loaderService: LoaderService
+  ) {}
 
   handleError(error: any) {
+    this.loaderService.setLoading(false);
+
     let title: String = 'An error has occurred!';
     let message: String = '';
     if (error instanceof HttpErrorResponse) {

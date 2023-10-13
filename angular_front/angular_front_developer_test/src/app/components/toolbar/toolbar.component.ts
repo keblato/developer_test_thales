@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,4 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss'],
 })
-export class ToolbarComponent {}
+export class ToolbarComponent {
+  @Input() onMenuOption: any;
+
+  onClick() {
+    this.onMenuOption.toggle();
+  }
+}
