@@ -3,63 +3,76 @@ package com.thaleskevin.developer_test.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Employee {
-        private Integer id;
-        @JsonProperty("employee_name")
-        private String employeeName;
-        @JsonProperty("employee_salary")
-        private Double employeeSalary;
-        @JsonProperty("employee_age")
-        private Integer employeeAge;
-        @JsonProperty("profile_image")
-        private String profileImage;
-        @JsonProperty("employee_annual_salary")
-        private Double employeeAnnualSalary;
 
-        public Integer getId() {
-                return id;
-        }
+    public Employee() {
+    }
 
-        public void setId(Integer id) {
-                this.id = id;
-        }
+    public Employee(Integer id, String employee_name, Integer employee_age, String profile_image, double employee_salary, double employee_annual_salary) {
+        this.id = id;
+        this.employeeName = employee_name;
+        this.employeeAge = employee_age;
+        this.profileImage = profile_image;
+        this.employeeSalary = employee_salary;
+        this.employeeAnnualSalary = employee_annual_salary;
+    }
 
-        public String getEmployeeName() {
-                return employeeName;
-        }
+    private Integer id;
+    @JsonProperty("employee_name")
+    private String employeeName;
+    @JsonProperty("employee_salary")
+    private Double employeeSalary;
+    @JsonProperty("employee_age")
+    private Integer employeeAge;
+    @JsonProperty("profile_image")
+    private String profileImage;
+    @JsonProperty("employee_annual_salary")
+    private Double employeeAnnualSalary;
 
-        public void setEmployeeName(String employeeName) {
-                this.employeeName = employeeName;
-        }
+    public Integer getId() {
+        return id;
+    }
 
-        public Double getEmployeeSalary() {
-                return employeeSalary;
-        }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-        public void setEmployeeSalary(Double employeeSalary) {
-                this.employeeSalary = employeeSalary;
-        }
+    public String getEmployeeName() {
+        return employeeName;
+    }
 
-        public Integer getEmployeeAge() {
-                return employeeAge;
-        }
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
 
-        public void setEmployeeAge(Integer employeeAge) {
-                this.employeeAge = employeeAge;
-        }
+    public Double getEmployeeSalary() {
+        return employeeSalary;
+    }
 
-        public String getProfileImage() {
-                return profileImage;
-        }
+    public void setEmployeeSalary(Double employeeSalary) {
+        this.employeeSalary = employeeSalary;
+    }
 
-        public void setProfileImage(String profileImage) {
-                this.profileImage = profileImage;
-        }
+    public Integer getEmployeeAge() {
+        return employeeAge;
+    }
 
-        public Double getEmployeeAnnualSalary() {
-                return employeeAnnualSalary;
-        }
+    public void setEmployeeAge(Integer employeeAge) {
+        this.employeeAge = employeeAge;
+    }
 
-        public void setEmployeeAnnualSalary(Double employeeAnnualSalary) {
-                this.employeeAnnualSalary = employeeAnnualSalary;
-        }
+    public String getProfileImage() {
+        return profileImage;
+    }
+
+    public void setProfileImage(String profileImage) {
+        this.profileImage = profileImage;
+    }
+
+    public Double getEmployeeAnnualSalary() {
+        return employeeAnnualSalary;
+    }
+
+    public void setEmployeeAnnualSalary(Double employeeAnnualSalary) {
+        this.employeeAnnualSalary = employeeAnnualSalary;
+    }
 }
