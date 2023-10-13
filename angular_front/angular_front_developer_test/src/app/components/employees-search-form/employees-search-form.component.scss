@@ -1,0 +1,11 @@
+.employee-form-container {
+  text-align: center;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

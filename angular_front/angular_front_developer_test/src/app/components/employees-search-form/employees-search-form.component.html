@@ -1,0 +1,20 @@
+<div class="employee-form">
+  <h1>Enter the employee id</h1>
+  <div class="employee-form-container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <mat-form-field class="employee-form-field">
+        <mat-label>Employee Id</mat-label>
+        <input
+          matInput
+          placeholder="Example: 2"
+          name="employeeId"
+          pattern="^[0-9]*$"
+          ngModel
+        />
+      </mat-form-field>
+      <div mat-dialog-actions>
+        <button mat-button color="primary">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
